@@ -14,6 +14,11 @@ class Sockets {
             //    fecha: new Date(),
             //});
 
+            socket.on('join', (room) => {
+              console.log(`Socket ${socket.id} joining ${room}`);
+              socket.join(room);
+           });
+
             // Escuchar evento
             socket.on('mensaje-cliente', (data) => {
                 console.log(data);

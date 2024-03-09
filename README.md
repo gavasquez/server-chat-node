@@ -14,3 +14,7 @@
 3. npm i nodemon => nodemon
 4. npm i dotenv => enviroment configuracion
 5. npm i cors => Cors permitir que otro dominio se conecte con nuestro backend
+6. npm i bcryptjs => Encriptar contraseñas
+7. npm i express-validator => Validacion de infromacion
+8. npm i jsonwebtoken => Token
+9. npm i mongoose => Conectarnos con la base de datos
