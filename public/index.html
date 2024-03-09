@@ -10,7 +10,8 @@
 </head>
 
 <body class="container">
-    <h1 class="mt-5">MiniChat</h1>
+  <h1>Acceso denegado!</h1>
+    <!-- <h1 class="mt-5">MiniChat</h1>
     <hr>
 
     <form id="miFormluario">
@@ -30,7 +31,7 @@
                 </ul>
             </div>
         </div>
-    </form>
+    </form> -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.4/socket.io.js"
         integrity="sha512-tE1z+95+lMCGwy+9PnKgUSIeHhvioC9lMlI7rLWU0Ps3XTdjRygLcy4mLuL0JAoK4TLdQEyP0yOl/9dMOqpH/Q=="
@@ -38,7 +39,11 @@
     <script>
         const socket = io('http://localhost:8080');
 
-        const form = document.querySelector('#miFormluario');
+        socket.on('connect', () => {
+          console.log('Conectado')
+        });
+
+        /* onst form = document.querySelector('#miFormluario');
         const mensajes = document.querySelector('#misMensajes');
         const txtMensaje = document.querySelector('#txtMensaje');
         form.addEventListener('submit', (ev) => {
@@ -49,11 +54,11 @@
                 date: Date.now(),
             });
             txtMensaje.value = '';
-        });
+        }); */
 
-        socket.on('mensaje-from-server', (data) => {
+       /*  socket.on('mensaje-from-server', (data) => {
             mensajes.innerHTML += `<li>${data.msg}</li>`;
-        } );
+        } ); */
         // Escuchar
         //socket.on('mensaje-bienvenida', (data) => {
         //    console.log(data)
