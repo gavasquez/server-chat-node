@@ -8,23 +8,22 @@ class Sockets {
     socketEvents() {
         // On connection
         this.io.on('connection', (socket) => {
-            // Emitir evento
-            //socket.emit('mensaje-bienvenida', {
-            //    msg: 'Bienvenido al Server',
-            //    fecha: new Date(),
-            //});
+           // TODO: Validar el jwt
+           // Si el token no es valido, desconectarlo
 
-            socket.on('join', (room) => {
-              console.log(`Socket ${socket.id} joining ${room}`);
-              socket.join(room);
-           });
+           // TODO: Saber que usuario esta activo mediante el UID
 
-            // Escuchar evento
-            socket.on('mensaje-cliente', (data) => {
-                console.log(data);
-                this.io.emit('mensaje-from-server', data);
-            });
+           // TODO: Emitir todos los usuarios conectados
 
+           // TODO: Socket join, uid
+
+           // TODO: Escuchar cuando el cliente envia un mensaje
+           //* mensaje-personal
+
+           // TODO: Disconnect
+           // Marcar en la bd que el usuario se desconecto
+
+           // TODO: Emitir todos los usuarios conectados
         });
     }
 }

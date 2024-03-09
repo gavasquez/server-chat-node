@@ -25,6 +25,11 @@ class Server {
     this.app.use( express.static( path.resolve( __dirname, '../public' ) ) );
     // CORS
     this.app.use( cors() );
+    // Parseo del Body
+    this.app.use(express.json());
+    // API ENDpoints
+    this.app.use('/api/login', require('../router/auth'));
+    this.app.use('/api/mensajes', require('../router/mensajes'));
   }
 
   configurarSockets() {

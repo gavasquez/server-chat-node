@@ -5,6 +5,7 @@
 
 ## Ejecutar
 1. npm run dev
+2. El servidor se encuenta ejecutando en el puerto 8080, si se quiere cambiar se debe ingresar a las variables de entorno
 
 
 ## Instalaciones que se realizaron
