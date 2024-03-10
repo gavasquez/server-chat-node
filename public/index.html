@@ -40,6 +40,8 @@
         const socket = io('http://localhost:8080');
         const room = 'sala-1';
 
+        
+
         socket.on('connect', () => {
           console.log('Conectado');
           if (socket && room) socket.emit('join', room);
