@@ -26,10 +26,11 @@ class Server {
     // CORS
     this.app.use( cors() );
     // Parseo del Body
-    this.app.use(express.json());
+    this.app.use( express.json() );
     // API ENDpoints
-    this.app.use('/api/login', require('../router/auth'));
-    this.app.use('/api/mensajes', require('../router/mensajes'));
+    this.app.use( '/api/login', require( '../router/auth' ) );
+    this.app.use( '/api/usuarios', require( '../router/usuarios' ) );
+    this.app.use( '/api/mensajes', require( '../router/mensajes' ) );
   }
 
   configurarSockets() {
