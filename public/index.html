@@ -38,9 +38,13 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
         const socket = io('http://localhost:8080');
+        const room = 'sala-1';
+
+        
 
         socket.on('connect', () => {
-          console.log('Conectado')
+          console.log('Conectado');
+          if (socket && room) socket.emit('join', room);
         });
 
         /* onst form = document.querySelector('#miFormluario');
